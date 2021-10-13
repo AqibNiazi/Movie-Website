@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie site</title>
+    <link rel="stylesheet" href="../bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/our team.css">
+<link rel="stylesheet" href="../css/lightslider.css">
+<link rel="fav icon" href="../images/favicon.png">
+
+    <script src="../jquery/jquery.js"></script>
+    <script src="../javascript/lightslider.js"></script>
+   <script src="../proper.js/popper.min.js"></script>
+   <script src="/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+    <header>
+
+      <!-- logo -->
+      <nav>
+        <a href="Home.html"><img src="../images/logo.png" alt=""  class="logo"></a>
+       
+        
+        <span class="toogle-btn">&#9776</span>
+     
+      <!-- LINKS -->
+      <ul class="nav-links" id="link">
+        <li><a href="Home.html">HOME</a></li>
+        <li><a href="Hollywood.html">HOLLYWOOD</a></li>
+        <li><a href="Bollywood.html">BOLLYWOOD</a></li>
+        <li><a href="TV Shows.html">TV SHOWS</a></li>
+        <li><a href="form validation.html">SIGN UP</a></li>
+        <li><a href="our team.html">CONTECT US</a></li>
+      </ul>
+
+      
+      <!-- SEARCH -->
+      <div class="nav-search">
+        <input type="text" placeholder="search your Movie Here" class="nav-search">
+        <a href="" class="search-btn"></a>
+        <img src="../images/search-solid.svg" alt="" class="search-icon">
+        
+      </div>
+      
+    </nav>
+     <!-- hidden links -->
+  <ul class="nav-links-hidden">
+    <li><a href="Home.html">HOME</a></li>
+        <li><a href="Hollywood.html">HOLLYWOOD</a></li>
+        <li><a href="Bollywood.html">BOLLYWOOD</a></li>
+        <li><a href="TV Shows.html">TV SHOWS</a></li>
+        <li><a href="form validation.html">SIGN UP</a></li>
+        <li><a href="our team.html">CONTECT US</a></li>
+  </ul>
+  <br>
+    </header>
+
+  
+
+
+
+
+<section id="movies">
+       <!-- movies -->
+       <div class="movies-heading">
+           <!-- <hr class="hr-line"> -->
+        <h2 class="h">Our Team</h2>
+       <!-- <hr class="hr-line"> -->
+    </div>
+    <section id="movies-list">
+        <!-- box 1 -->
+        <div class="movies-box">
+            <!-- img -->
+            <div class="upper waseem"></div>
+            <div class="team-img">
+                <!-- <div class="quaility">HDRip</div> -->
+                <img src="../img/waseem.png" alt="">
+               <!-- text -->
+               <br><br>
+               <h3 class="waseem-details">M.Waseem</h3>
+               <h4 class="waseem-details">Backend Developer</h4>
+               <div class="icons">
+                <a href=""><img src="../img/facebook.png" alt="" class="facebook-icon" ></a>
+                <a href=""><img src="../img/twitter.png" alt="" class="twitter-icon"></a>
+                <a href=""><img src="../img/whatsapp.png" alt="" class="whatsapp-icon" ></a>
+
+               </div>
+           </div>
+              
+        </div>
+
+        <!-- box 2 -->
+       <!-- box 1 -->
+       <div class="movies-box">
+        <!-- img -->
+        <div class="upper Imtiaz"></div>
+        <div class="team-img">
+            <!-- <div class="quaility">HDRip</div> -->
+            <img src="../img/Imtiaz.png" alt="">
+           <!-- text -->
+           <br><br>
+           <h3 class="imtiaz-details">Imtiaz Hussain</h3>
+           <h4 class="imtiaz-details">Frontend Developer</h4>
+           <div class="icons">
+            <a href=""><img src="../img/facebook.png" alt="" class="facebook-icon" ></a>
+           <a href=""><img src="../img/twitter.png" alt="" class="twitter-icon"></a>
+           <a href=""><img src="../img/whatsapp.png" alt="" class="whatsapp-icon" ></a>
+
+           </div>
+       </div>
+          
+    </div>
+
+
+
+    <div class="movies-box">
+        <!-- img -->
+        <div class="upper Aqeb"></div>
+        <div class="team-img">
+            <!-- <div class="quaility">HDRip</div> -->
+            <img src="../img/Aqeb.png" alt="">
+           <!-- text -->
+           <br><br>
+           <h3 class="aqeb-details">Aqeb Javeed</h3>
+           <h4 class="aqeb-details">Admin</h4>
+           <div class="icons">
+           <a href=""><img src="../img/facebook.png" alt="" class="facebook-icon" ></a>
+           <a href=""><img src="../img/twitter.png" alt="" class="twitter-icon"></a>
+           <a href=""><img src="../img/whatsapp.png" alt="" class="whatsapp-icon" ></a>
+
+           </div>
+       </div>
+          
+    </div>
+
+     
+
+     
+
+    
+</section>
+
+    
+</section>
+
+
+
+
+
+    <!--  script -->
+<script>
+    
+
+    $(document).ready(function(){
+    $(".facebook-icon").mouseover(function(){
+        this.src="../img/realFacebook.png"
+    }).mouseout(function(){
+        this.src="../img/facebook.png"
+    });
+
+    $(".twitter-icon").mouseover(function(){
+        this.src="../img/realTwitter.png"
+    }).mouseout(function(){
+        this.src="../img/twitter.png"
+    });
+
+    $(".whatsapp-icon").mouseover(function(){
+        this.src="../img/realWhatsapp.png"
+    }).mouseout(function(){
+        this.src="../img/whatsapp.png"
+    });
+});
+</script>
+
+<script>
+     
+         $(document).ready(function(){
+             $(".toogle-btn").click(function(){
+                
+                $(".nav-links-hidden").slideToggle(150)
+             });
+
+            
+         });
+
+         $(document).ready(function(){
+            $(window).resize(function(){
+                if($(window).width() > 807){
+                $(".nav-links-hidden").hide();
+             }
+            })
+             
+            
+         });
+       
+</script>
+
+
+    <script>
+      $(document).ready(function() {
+$('#autoWidth,#autoWidth2').lightSlider({
+    autoWidth:true,
+    loop:true,
+    onSliderLoad: function() {
+        $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+    } 
+});  
+});
+</script>
+</body>
+</html>

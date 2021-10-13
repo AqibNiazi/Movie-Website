@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie site</title>
+    <link rel="stylesheet" href="../bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/our team.css">
+<link rel="stylesheet" href="../css/lightslider.css">
+<link rel="stylesheet" href="../css/form validtation.css">
+<link rel="fav icon" href="../images/favicon.png">
+
+    <script src="../jquery/jquery.js"></script>
+    <script src="../javascript/lightslider.js"></script>
+   <script src="../proper.js/popper.min.js"></script>
+   <script src="/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+    <header>
+
+      <!-- logo -->
+      <nav>
+        <a href="Home.html"><img src="../images/logo.png" alt=""  class="logo"></a>
+        
+        
+        <span class="toogle-btn">&#9776</span>
+     
+      <!-- LINKS -->
+      <ul class="nav-links" id="link">
+        <li><a href="Home.html">HOME</a></li>
+        <li><a href="Hollywood.html">HOLLYWOOD</a></li>
+        <li><a href="Bollywood.html">BOLLYWOOD</a></li>
+        <li><a href="TV Shows.html">TV SHOWS</a></li>
+        <li><a href="form validation.html">SIGN UP</a></li>
+        <li><a href="our team.html">CONTECT US</a></li>
+      </ul>
+
+      
+      <!-- SEARCH -->
+      <div class="nav-search">
+        <input type="text" placeholder="search your Movie Here" class="nav-search">
+        <a href="" class="search-btn"></a>
+        <img src="../images/search-solid.svg" alt="" class="search-icon">
+        
+      </div>
+      
+    </nav>
+     <!-- hidden links -->
+  <ul class="nav-links-hidden">
+    <li><a href="Home.html">HOME</a></li>
+        <li><a href="Hollywood.html">HOLLYWOOD</a></li>
+        <li><a href="Bollywood.html">BOLLYWOOD</a></li>
+        <li><a href="TV Shows.html">TV SHOWS</a></li>
+        <li><a href="form validation.html">SIGN UP</a></li>
+        <li><a href="our team.html">CONTECT US</a></li>
+  </ul>
+  <br>
+    </header>
+
+  
+    <section id="movies" class="form-validation">
+        <!-- movies -->
+        <div class="movies-heading">
+            <!-- <hr class="hr-line"> -->
+         <h2 class="h">FORM VALIDATION USING JAVASCRIPT</h2>
+        <!-- <hr class="hr-line"> -->
+     </div>
+
+     <div class="form">
+
+        <div class="container"><br>
+            
+            <div class="col-lg-6 m-auto d-block">
+                
+                <form action="#" onsubmit="return validation()" class="">
+                    
+                    <div class="form-group">
+                        <label for="user" class="font-weight-bold"> Username: </label>
+                        <input type="text" name="user" class="form-control field" id="user" autocomplete="off" >
+                        <span id="username" class="text-danger font-weight-bold"> </span>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="font-weight-bold"> Password: </label>
+                        <input type="text" name="pass" class="form-control field" id="pass" autocomplete="off">
+                        <span id="passwords" class="text-danger font-weight-bold"> </span>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="font-weight-bold"> Confirm Password: </label>
+                        <input type="text" name="conpass" class="form-control field" id="conpass" autocomplete="off">
+                        <span id="confrmpass" class="text-danger font-weight-bold"> </span>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="font-weight-bold"> Mobile Number: </label>
+                        <input type="text" name="mobile" class="form-control field" id="mobileNumber" autocomplete="off">
+                        <span id="mobileno" class="text-danger font-weight-bold"> </span>
+                    </div>
+    
+                    <div class="form-group">
+                        <label class="font-weight-bold"> Email: </label>
+                        <input type="text" name="email" class="form-control field" id="emails" autocomplete="off">
+                        <span id="emailids" class="text-danger font-weight-bold"> </span>
+                    </div>
+    
+                    <input type="submit" name="submit" value="submit" class="btn btn-primary col-lg-12" 	autocomplete="off">
+    
+    
+                </form><br><br>
+    
+    
+            </div>
+        </div>
+    
+    
+    
+        <script type="text/javascript">
+            
+    
+            function validation(){
+    
+                var user = document.getElementById('user').value;
+                var pass = document.getElementById('pass').value;
+                var confirmpass = document.getElementById('conpass').value;
+                var mobileNumber = document.getElementById('mobileNumber').value;
+                var emails = document.getElementById('emails').value;
+    
+    
+    
+    
+    
+                if(user == ""){
+                    document.getElementById('username').innerHTML ="Please fill the username field";
+                    return false;
+                }
+                if((user.length <= 3) || (user.length > 15)) {
+                    document.getElementById('username').innerHTML ="Username length must be between 3 and 15";
+                    return false;	
+                }
+                if(!isNaN(user)){
+                    document.getElementById('username').innerHTML ="only characters are allowed";
+                    return false;
+                }
+    
+    
+    
+    
+    
+    
+    
+                if(pass == ""){
+                    document.getElementById('passwords').innerHTML ="Please fill the password field";
+                    return false;
+                }
+                if((pass.length <= 8) || (pass.length > 20)) {
+                    document.getElementById('passwords').innerHTML =" Passwords length must be between  8 and 20";
+                    return false;	
+                }
+    
+    
+                if(pass!=confirmpass){
+                    document.getElementById('confrmpass').innerHTML =" ** Password does not match the confirm password";
+                    return false;
+                }
+    
+    
+    
+                if(confirmpass == ""){
+                    document.getElementById('confrmpass').innerHTML ="Please fill the confirmpassword field";
+                    return false;
+                }
+    
+    
+    
+    
+                if(mobileNumber == ""){
+                    document.getElementById('mobileno').innerHTML ="Please fill the mobile Number field";
+                    return false;
+                }
+                if(isNaN(mobileNumber)){
+                    document.getElementById('mobileno').innerHTML ="user must write digits only not characters";
+                    return false;
+                }
+                if(mobileNumber.length!=11){
+                    document.getElementById('mobileno').innerHTML =" Mobile Number must be 11 digits only";
+                    return false;
+                }
+    
+    
+    
+                if(emails == ""){
+                    document.getElementById('emailids').innerHTML ="Please fill the email id field";
+                    return false;
+                }
+                if(emails.indexOf('@') <= 0 ){
+                    document.getElementById('emailids').innerHTML ="@ Invalid Position";
+                    return false;
+                }
+    
+                if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+                    document.getElementById('emailids').innerHTML =" Invalid Position of '.'";
+                    return false;
+                }
+            }
+    
+        </script>
+    
+     </div>
+     </section>
+    
+
+    <!--  script -->
+
+
+<script>
+     
+         $(document).ready(function(){
+             $(".toogle-btn").click(function(){
+                $(".nav-links-hidden").slideToggle(150)
+             });
+
+         });
+
+         $(document).ready(function(){
+            $(window).resize(function(){
+                if($(window).width() > 807){
+                $(".nav-links-hidden").hide();
+             }
+            });
+             
+            
+         });
+       
+</script>
+
+
+    <script>
+      $(document).ready(function() {
+$('#autoWidth,#autoWidth2').lightSlider({
+    autoWidth:true,
+    loop:true,
+    onSliderLoad: function() {
+        $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+    } 
+});  
+});
+</script>
+</body>
+</html>

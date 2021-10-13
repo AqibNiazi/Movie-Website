@@ -1,0 +1,31 @@
+.field{
+ border: none;
+ border-radius: 0px;
+ border-bottom: 2px solid cyan;
+ box-shadow:none ;
+}
+
+input[type="text"]:hover{
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #28a745;
+    box-shadow:none ;
+   }
+
+   input[type="text"]:focus{
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #28a745;
+    box-shadow:none ;
+   }
+
+
+
+
+@media screen and (max-width: 590px){
+     .movies-heading h2{
+        font-size: 18px;
+    }
+}
+
+
